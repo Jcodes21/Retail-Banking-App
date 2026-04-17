@@ -13,8 +13,13 @@ A seperate URL is used as a cash flow handler its UI that manages transactions l
   Authentication and authorisiation
     - JWT based authentication
     - Input sanitation
+
+  HTTP/TLS
 ### uptime
+ - Rate limiting
 ### Data consistency & integrity
+
+Audit logging
 
 # user stories
 As a user I can:
@@ -41,8 +46,7 @@ Package name: com.jcodes21.retailbankingapp
 Packaging: Jar
 Config: Properties
 Java: 17
-Dependencies: Spring Web, Spring Data JPA, Spring Security, PostgreSQL Driver
-
+Dependencies: Spring Web
 React
 
 Postgres 
@@ -53,14 +57,18 @@ bcrypt
 JWT
 
 ## database
-usertable
+user table
 id (PK)
 firstname
 lastname
 middle name
 date of birth
 address
+email
+username
 password
+is_frozen
+is_active
 created at
 
 account table
@@ -83,6 +91,17 @@ reference_id (for linking transfer pairs)
 counterparty_account (nullable)
 description
 created_at
+
+payee table
+id (PK)
+user_id: (FK)
+String firstname:
+String lastname:
+String accountnumber:
+String sortcode:
+
+
+
 
 
 # API
