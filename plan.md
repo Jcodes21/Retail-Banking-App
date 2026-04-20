@@ -78,6 +78,8 @@ user id (FK users table)
 account type
 account number
 sort code
+is active
+is frozen
 created at
 
 transaction table
