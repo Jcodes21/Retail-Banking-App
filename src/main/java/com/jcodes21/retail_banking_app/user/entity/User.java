@@ -1,6 +1,5 @@
 package com.jcodes21.retail_banking_app.user.entity;
 
-
 import jakarta.persistence.*; // ORM (Previouusly JPA)
 import java.time.LocalDate;
 import java.time.LocalDateTime;
