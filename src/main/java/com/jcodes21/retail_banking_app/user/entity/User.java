@@ -22,6 +22,5 @@ public class User {
     private String userName;
     private String password;
     private LocalDateTime createdAt;
-    private Boolean isActive;
-    private Boolean isFrozen;
+    private UserAccountStatus userAccountStatus;
 }
