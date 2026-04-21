@@ -14,9 +14,9 @@ public class Account {
     private UUID id;
     // private UUID user.id;
     private BigDecimal balance;
-    private enum accountType;
+    private AccountType accountType; //created this type in package files
     private String sortCode;
     private String accountNumber;
-    private boolean status = isActive, isFrozen;
+    private AccountStatus status; //enum forces 1state, bool could've been both frozen + active = true
     private LocalDateTime createdAt;
 }
