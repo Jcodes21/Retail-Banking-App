@@ -13,8 +13,7 @@ public class AccountService {
     String email;
 
     // methods
-    public static void createAccount() {
-
+    public void createAccount() {
 
         take the user details and add it to the account record being created in the db
         generate account number
@@ -26,23 +25,28 @@ public class AccountService {
 
     }
 
-    public static void getAllAccounts{
+    public void getAllAccounts{
 
     }
 
     public void freezeAccount(){
+        set the enum state to frozen
 
     }
 
-    public static void deleteAccount(){
+    public void deleteAccount(){
+        set the enum state to frozen
+        delete account from db
 
     }
 
-    public static void deposit(){
-
+    public void deposit(){
+        check the funds exist to support this transaction
+        update ledger to update balance
     }
 
-    public static void withdraw(){
+    public void withdraw(){
+        update ledger
     }
 
 
