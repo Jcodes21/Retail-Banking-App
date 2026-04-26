@@ -1,5 +1,5 @@
-package com.jcodes21.retail_banking_app.user.repository;
-import com.jcodes21.retail_banking_app.user.entity.User;
+package com.jcodes21.retail_banking_app.Customer.repository;
+import com.jcodes21.retail_banking_app.Customer.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 

@@ -1,4 +1,4 @@
-package com.jcodes21.retail_banking_app.user.entity;
+package com.jcodes21.retail_banking_app.Customer.entity;
 
 import jakarta.persistence.*; // ORM (Previouusly JPA)
 import java.time.LocalDate;
@@ -7,7 +7,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "users")
-public class User {
+public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -22,5 +22,5 @@ public class User {
     private String userName;
     private String password;
     private LocalDateTime createdAt;
-    private UserAccountStatus userAccountStatus;
+    private CustomerAccountStatus userAccountStatus;
 }
