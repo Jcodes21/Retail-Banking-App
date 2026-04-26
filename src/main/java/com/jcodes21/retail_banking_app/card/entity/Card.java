@@ -4,13 +4,16 @@ import org.springframework.context.annotation.Primary;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-@GeneratedValue
-@Table("card");
+@Entity
+@Table="card"
 public class Card {
-    @Primary
+    @PrimaryKeyJoinColumn
+    @GeneratedValue
     UUID id;
     @ForeignKey
     UUID accountId;
+    String hashedPin;
+    String cardNumber;
     String AccountNumber;
     String sortCode;
     String securityCode;
