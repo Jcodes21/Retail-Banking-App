@@ -7,4 +7,4 @@ import java.util.UUID;
 // JPA/Spring Data reads these custom methods and generates the implementation.
 public interface AccountRepository extends JpaRepository<Account, UUID> {
     Optional<Account> findByAccountNumber(String account);
-}
+};
