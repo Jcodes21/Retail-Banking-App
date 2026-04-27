@@ -16,11 +16,16 @@ public class AccountService {
     String email;
 
     // methods
+    @Transactional
     public void createAccount() {
-        take the user details and add it to the account record being created in the db
-        generate account number
-        generate sort code
-        db.save();
+recieve cutomer's account details from a DTO
+    validate required details
+    create a new account object
+    generate an account number
+        generate a sort code
+        set a staring balance of 0
+    Save with account repository
+        return the created account or a DTO response '
     };
 
     public static void getAccount(){
@@ -42,7 +47,6 @@ public class AccountService {
 
 
     atmAuthentication(){
-        Scanner userPinInput = new Scanner(System.in);
         is this pin the same pin that is asscoaitated to this card?
     }
     validateDepositAmount() {
@@ -59,16 +63,18 @@ public class AccountService {
     updateBalance(balance) {
         balance = validatedBalanceAmount + balance;
     }
+
+    // Spring wraps this method in a database transaction.
+    // If the transaction record and account balance update both succeed, it commits.
+    // If anything fails, it rolls everything back.
+    @Transactional
     public void deposit(){
     BigDecimal depositAmount;
 
-
         //Create transaction record;
-        @Transactional;
         validateDepositAmount();
     updateBalance(balance);
-    commit both to the database at the same time;
-    rollback if anything fails;
+
     }
 
     public void withdraw(){
